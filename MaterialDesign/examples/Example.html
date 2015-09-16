@@ -1,0 +1,20 @@
+<div>
+	<!-- Angular Way -->
+	<mdl-button>Here is the Inner HTML</mdl-button>
+	<lx-button class="here is a custom class">Text</lx-button>
+	<lx-dropdown>
+		<lx-dropdown-item>here is an Item</lx-dropdown-item>
+	</lx-dropdown>
+	
+	<!-- MDL way -->
+	<!-- Note: Angular loads after the MDL's componentRegister has fired so we need to do this -->
+	<script>
+		// Note theres betters ways to upgrade components like looping etc etc
+		// Michaels tvl-shim if effective 
+
+		var element = document.getElementById('mdlButton');
+		componentHandler.upgradeElement(element, 'MaterialButton');
+	</script>
+	<button id="mdlButton" class="mdl-button mdl-js-button mdl-js-ripple"> Button Text </button>
+	
+</div>
